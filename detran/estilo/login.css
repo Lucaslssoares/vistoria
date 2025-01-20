@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.login-container {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de hover para o botão */
+.btn-primary {
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Foco nos campos de entrada */
+input:focus,
+button:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+/* Mensagem de erro */
+.alert {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .login-container {
+        padding: 15px;
+        box-shadow: none;
+    }
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 5px;
+    /* espaçamento inferior */
+    max-width: 250px;
+    /* ajusta o tamanho */
+    height: auto;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspeção Veicular</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-5 p-4 shadow-lg rounded bg-white">
+        <img src="imagens/detran-pa.jpg" alt="logo da empresa" class="logo">
+
+        <h2 class="mb-4 text-primary">Inspeção Veicular</h2>
+
+        <!-- Formulário -->
+        <form id="inspectionForm" novalidate>
+            <!-- Campo Número Vistoria com botão de consulta -->
+            <div class="mb-3 row align-items-center">
+                <label for="numeroVistoria" class="col-sm-2 col-form-label fw-bold">Número Vistoria</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control border-primary" id="numeroVistoria"
+                        placeholder="Digite o número de vistoria" title="número de vistoria" required>
+                    <div class="invalid-feedback">Por favor, insira o número de vistoria.</div>
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" id="consultaButton" class="btn btn-primary w-100">
+                        <i class="fas fa-search"></i> Consultar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Informações Gerais -->
+            <div class="mb-3 row align-items-center">
+                <label for="placa" class="col-sm-2 col-form-label fw-bold">Placa</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control border-primary" id="placa" title="Placa do veículo" required
+                        disabled>
+                    <div class="invalid-feedback">Por favor, insira a placa.</div>
+                </div>
+            </div>
+
+            <!-- Proprietário -->
+            <h4 class="mt-4 text-secondary">Proprietário</h4>
+            <div class="mb-3 row align-items-center">
+                <label for="proprietario" class="col-sm-2 col-form-label fw-bold">Proprietário</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control border-primary" id="proprietario"
+                        title="Nome do proprietário" required disabled>
+                    <div class="invalid-feedback">Por favor, insira o nome do proprietário.</div>
+                </div>
+            </div>
+
+            <!-- Dados do Veículo -->
+            <h4 class="mt-4 text-secondary">Dados do Veículo</h4>
+            <div class="mb-3 row align-items-center">
+                <label for="chassi" class="col-sm-2 col-form-label fw-bold">Chassi</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control border-secondary" id="chassi" title="Chassi do veículo"
+                        disabled>
+                </div>
+            </div>
+            <div class="mb-3 row align-items-center">
+                <label for="cor" class="col-sm-2 col-form-label fw-bold">Cor</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control border-secondary" id="cor" title="Cor do veículo" disabled>
+                    <div class="invalid-feedback">Por favor, insira a cor do veículo.</div>
+                </div>
+            </div>
+            <div class="mb-3 row align-items-center">
+                <label for="modelo" class="col-sm-2 col-form-label fw-bold">Marca/Modelo</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control border-secondary" id="modelo" title="Marca/Modelo do veículo"
+                        disabled>
+                </div>
+            </div>
+
+            <!-- Botões de Navegação -->
+            <div class="d-flex justify-content-between mt-4">
+                <button type="button" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    Seguir <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/vistoria.js"></script>
+    <script src="js/camera.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+
+</html>
